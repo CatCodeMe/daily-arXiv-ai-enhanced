@@ -47,7 +47,7 @@ jobs:
       if: always()  # 无论任务成功或失败都发送通知
       with:
         key: ${{ secrets.SERVERCHAN_KEY }}  # 替换为你的 ServerChan SCKEY
-        text: "arXiv Daily AI 任务完成通知"
+        text: "arXiv Daily AI task" #不能超过 32 字符
         desp: |
           **任务状态**: ${{ job.status }}  
           **运行时间**: ${{ steps.run-script.outputs.current-time }}  
