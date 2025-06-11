@@ -47,8 +47,7 @@ jobs:
       if: always()  # 无论任务成功或失败都发送通知
       with:
         key: ${{ secrets.SERVERCHAN_KEY }}  # 替换为你的 ServerChan SCKEY
-        text: "arXiv Daily Done" #不能超过 32 字符
+        text: "arXiv Daily AI Summary Done" #不能超过 32 字符
         desp: |
           **status**: ${{ job.status }}
-          **运行时间**: ${{ steps.run-script.outputs.current-time }} 
           **今日论文摘要**: [${{ env.DATE }}](https://github.com/CatCodeMe/daily-arXiv-ai-enhanced/blob/main/data/${{ env.DATE }}.md)
