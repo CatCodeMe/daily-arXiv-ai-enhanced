@@ -49,4 +49,6 @@ jobs:
         key: ${{ secrets.SERVERCHAN_KEY }}  # 替换为你的 ServerChan SCKEY
         text: "arXiv Daily AI Done" #不能超过 32 字符
         desp: |
-          ${{ job.status }}
+          **status**: ${{ job.status }}
+          **运行时间**: ${{ steps.run-script.outputs.current-time }} 
+          **今日论文摘要**: [点击查看](https://github.com/CatCodeMe/daily-arXiv-ai-enhanced/blob/main/data/${{ env.DATE }}.md)
