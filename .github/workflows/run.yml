@@ -5,8 +5,8 @@ name: arXiv-daily-ai-enhanced
 
 on:
   schedule:
-    # UTC 8:30 = 北京时间 16:30
-    - cron: '30 8 * * *'
+    # UTC 8:30 = 北京时间 16:30, 每周 1,4
+    - cron: '30 8 * * 1,4'
   workflow_dispatch:
 
 
